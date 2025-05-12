@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo "Running tests..."
+      - mvn clean test
+  build:
+    commands:
+      - echo "Building the project..."
+      - mvn package
+  post_build:
+    commands:
+      - echo "Build complete."
+artifacts:
+  files:
+    - target/*.jar
+  discard-paths: yes
+reports:
+  surefire_reports:
+    files:
+      - target/surefire-reports/*.xml
+    file-format: JUNITXML
