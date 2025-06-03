@@ -83,11 +83,10 @@
         <archive>
           <manifest>
             <addClasspath>true</addClasspath>
-            <mainClass>com.example.App</mainClass>
+            <mainClass>com.example.App</mainClass> <!-- Replace with your actual class -->
           </manifest>
         </archive>
       </configuration>
     </plugin>
   </plugins>
 </build>
-
